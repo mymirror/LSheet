@@ -154,7 +154,7 @@
 
 - (void)hide
 {
-    __unsafe_unretained LCusSheet *weakSelf = self;
+     LCusSheet * __weak weakSelf = self;
     CGRect frame = _sheetTableView.frame;
     [UIView animateWithDuration:0.25 animations:^{
         weakSelf.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0];
