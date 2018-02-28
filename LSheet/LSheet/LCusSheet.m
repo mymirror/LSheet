@@ -148,7 +148,7 @@
     [[[UIApplication sharedApplication] keyWindow] addSubview:self];
     [self addSubview:_sheetTableView];
     [UIView animateWithDuration:0.25 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0.5 options:UIViewAnimationOptionLayoutSubviews animations:^{
-        _sheetTableView.transform = CGAffineTransformMakeTranslation(0, -_sheetTableView.frame.size.height);
+        self->_sheetTableView.transform = CGAffineTransformMakeTranslation(0, -_sheetTableView.frame.size.height);
     } completion:^(BOOL finished) {}];
 }
 
@@ -158,9 +158,9 @@
     CGRect frame = _sheetTableView.frame;
     [UIView animateWithDuration:0.25 animations:^{
         weakSelf.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0];
-        _sheetTableView.transform = CGAffineTransformMakeTranslation(0, frame.size.height);
+        self->_sheetTableView.transform = CGAffineTransformMakeTranslation(0, frame.size.height);
     } completion:^(BOOL finished) {
-        [_sheetTableView removeFromSuperview];
+        [self->_sheetTableView removeFromSuperview];
         [weakSelf removeFromSuperview];
     }];
 }
