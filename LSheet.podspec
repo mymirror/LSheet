@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     a similar UIActionSheet UI,useage is also similar UIActionSheet
                    DESC
 
-  s.homepage     = "https://github.com/mymirror/LSheett"
+  s.homepage     = "https://github.com/mymirror/LSheet"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
