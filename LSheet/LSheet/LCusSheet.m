@@ -149,7 +149,7 @@
     [self addSubview:_sheetTableView];
     __block LCusSheet *weakSelf = self;
     [UIView animateWithDuration:0.25 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0.5 options:UIViewAnimationOptionLayoutSubviews animations:^{
-        weakSelf->_sheetTableView.transform = CGAffineTransformMakeTranslation(0, -_sheetTableView.frame.size.height);
+        weakSelf->_sheetTableView.transform = CGAffineTransformMakeTranslation(0, -weakSelf->_sheetTableView.frame.size.height);
     } completion:^(BOOL finished) {}];
 }
 
