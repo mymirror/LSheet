@@ -158,9 +158,9 @@
     CGRect frame = _sheetTableView.frame;
     [UIView animateWithDuration:0.25 animations:^{
         weakSelf.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0];
-        self->_sheetTableView.transform = CGAffineTransformMakeTranslation(0, frame.size.height);
+        weakSelf->_sheetTableView.transform = CGAffineTransformMakeTranslation(0, frame.size.height);
     } completion:^(BOOL finished) {
-        [self->_sheetTableView removeFromSuperview];
+        [weakSelf->_sheetTableView removeFromSuperview];
         [weakSelf removeFromSuperview];
     }];
 }
